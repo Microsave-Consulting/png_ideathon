@@ -1,0 +1,2377 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.hackathon {
+  background-color: #ffffff;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 5820px;
+  position: relative;
+}
+
+.hackathon .nav-bar {
+  display: flex;
+  width: 1440px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 85px;
+  position: absolute;
+  top: 0;
+  left: calc(50.00% - 720px);
+  background-color: #303b6e;
+  box-shadow: 0px 4px 4px #d0d0d040;
+}
+
+.hackathon .rectangle {
+  position: relative;
+  width: 60px;
+  height: 36px;
+  aspect-ratio: 1.67;
+}
+
+.hackathon .frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+  transform: rotate(180deg);
+}
+
+.hackathon .language {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  position: relative;
+  align-self: stretch;
+  flex: 0 0 auto;
+  background-color: #2d488d;
+  border-radius: 8px;
+  transform: rotate(180deg);
+}
+
+.hackathon .div {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1;
+}
+
+.hackathon .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.50px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--colors-backgrounds-primary);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .theme {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #2d488d;
+  border-radius: 8px;
+}
+
+.hackathon .wb-sunny {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transform: rotate(-180deg);
+}
+
+.hackathon .frame-2 {
+  position: absolute;
+  top: 72px;
+  left: calc(50.00% - 720px);
+  width: 1440px;
+  height: 589px;
+  background-color: #303b6e;
+}
+
+.hackathon .overlap-group {
+  position: absolute;
+  height: 589px;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 75px 45.1px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-width: 1440px;
+  background-image: url(./img/group.png);
+  background-size: 100% 100%;
+}
+
+.hackathon .group {
+  width: 632px;
+  height: 430px;
+  aspect-ratio: 1.47;
+}
+
+.hackathon .group-2 {
+  position: absolute;
+  width: 42.02%;
+  height: 32.12%;
+  top: 19.35%;
+  left: 5.90%;
+}
+
+.hackathon .frame-3 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 20px;
+  position: absolute;
+  top: 427px;
+  left: calc(50.00% - 630px);
+  border-radius: 12px;
+  box-shadow: 0px 0px 6.2px #8c8c8c52;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.hackathon .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #303b6e;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+  white-space: nowrap;
+}
+
+.hackathon .img-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.hackathon .p {
+  position: absolute;
+  top: 334px;
+  left: 87px;
+  width: 637px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 27px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .rectangle-2 {
+  position: absolute;
+  top: 661px;
+  left: calc(50.00% - 720px);
+  width: 1440px;
+  height: 808px;
+  background-color: #f7f9fb;
+}
+
+.hackathon .frame-4 {
+  display: flex;
+  flex-direction: column;
+  width: 1268px;
+  align-items: flex-start;
+  gap: 20px;
+  position: absolute;
+  top: 722px;
+  left: calc(50.00% - 632px);
+}
+
+.hackathon .frame-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .div-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #fff7ec;
+  border-radius: 59px;
+  border: 1px solid;
+  border-color: #eab05c;
+}
+
+.hackathon .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .text-wrapper-4 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 44px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .text-wrapper-5 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* DESKTOP: "Who Can Participate" + "Organisers" row */
+.hackathon .frame-6 {
+  display: flex;
+  width: 1268px;
+  align-items: stretch;              /* cards same height */
+  gap: 24px;
+  position: absolute;
+  top: 1126px;                       /* your original vertical position */
+  left: calc(50% - 634px);           /* centred 1268px container */
+}
+
+
+
+.hackathon .frame-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #f2f2f2;
+}
+
+.hackathon .frame-8 {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .fi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 9px;
+  background-color: #eab05c;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .group-3 {
+  position: relative;
+  width: 22.13px;
+  height: 24px;
+  background-size: 100% 100%;
+}
+
+.hackathon .text-wrapper-6 {
+  position: relative;
+  width: fit-content;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-9 {
+  display: flex;
+  align-items: flex-start;   /* was center */
+  gap: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+}
+
+.hackathon .text-wrapper-7 {
+  position: relative;
+  flex: 1;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 21.2px;
+}
+
+.hackathon .frame-10 {
+  display: flex;
+  height: 24px;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.hackathon .text-wrapper-8 {
+  position: relative;
+  width: fit-content;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 21.2px;
+  white-space: nowrap;
+}
+
+.hackathon .frame-11 {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .text-wrapper-9 {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 21.2px;
+}
+
+.hackathon .frame-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #f2f2f2;
+}
+
+.hackathon .img-3 {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-13 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .text-wrapper-10 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .text-wrapper-11 {
+  position: absolute;
+  top: 1543px;
+  left: calc(50.00% - 635px);
+  width: 1270px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 44px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .group-4 {
+  position: absolute;
+  top: 1669px;
+  left: 120px;
+  width: 1200px;
+  height: 1250px;
+}
+
+.hackathon .frame-14 {
+  display: flex;
+  flex-direction: column;
+  width: 1088px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: absolute;
+  top: 0;
+  left: 112px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #f4f4f4;
+}
+
+.hackathon .frame-15 {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-16 {
+  display: flex;
+  width: 76px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 12px;
+  position: relative;
+  background-color: #ffeacd;
+  border-radius: 37px;
+}
+
+.hackathon .text-wrapper-12 {
+  margin-left: -4.00px;
+  margin-right: -4.00px;
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .frame-17 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 12px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #ffeacd;
+  border-radius: 37px;
+}
+
+.hackathon .text-wrapper-13 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .frame-18 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  width: 100%;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-19 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .text-wrapper-14 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: normal;
+}
+
+.hackathon .element-november-to {
+  position: relative;
+  width: fit-content;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #484f53;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .text-wrapper-15 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #484f53;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .digital-ID {
+  position: relative;
+  align-self: stretch;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #484e53;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .frame-20 {
+  display: flex;
+  flex-direction: column;
+  width: 1088px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: absolute;
+  top: 330px;
+  left: 112px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #f4f4f4;
+}
+
+.hackathon .element-november {
+  position: relative;
+  width: fit-content;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .text-wrapper-16 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #4a4a4a;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .text-wrapper-17 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #4a4a4a;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .frame-21 {
+  display: flex;
+  flex-direction: column;
+  width: 1088px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: absolute;
+  top: 630px;
+  left: 112px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #f4f4f4;
+}
+
+.hackathon .frame-22 {
+  display: flex;
+  flex-direction: column;
+  width: 1088px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: absolute;
+  top: 963px;
+  left: 112px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #f4f4f4;
+}
+
+.hackathon .line {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  width: 1px;
+  height: 1250px;
+  object-fit: cover;
+}
+
+.hackathon .fi-2 {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 52px;
+  height: 52px;
+}
+
+.hackathon .fi-3 {
+  position: absolute;
+  top: 346px;
+  left: 0;
+  width: 52px;
+  height: 52px;
+}
+
+.hackathon .fi-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  position: absolute;
+  top: 646px;
+  left: 0;
+  background-color: #eab05c;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.hackathon .fi-4 {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  aspect-ratio: 1;
+}
+
+.hackathon .vector {
+  position: absolute;
+  width: 70.90%;
+  height: 89.84%;
+  top: 5.08%;
+  left: 14.55%;
+}
+
+.hackathon .fi-5 {
+  position: absolute;
+  top: 979px;
+  left: 0;
+  width: 52px;
+  height: 52px;
+}
+
+.hackathon .rectangle-3 {
+  position: absolute;
+  top: 3001px;
+  left: calc(50.00% - 720px);
+  width: 1440px;
+  height: 869px;
+  background-color: #f7f9fb;
+}
+
+.hackathon .frame-23 {
+  display: flex;
+  flex-direction: column;
+  width: 783px;
+  align-items: flex-start;
+  gap: 8px;
+  position: absolute;
+  top: 3065px;
+  left: 87px;
+}
+
+.hackathon .text-wrapper-18 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 44px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .frame-24 {
+  display: flex;
+  flex-direction: column;
+  width: 1268px;
+  align-items: flex-start;
+  gap: 8px;
+  position: absolute;
+  top: 3950px;
+  left: 87px;
+}
+
+.hackathon .frame-25 {
+  display: flex;
+  flex-direction: column;
+  width: 1268px;
+  align-items: flex-start;
+  gap: 8px;
+  position: absolute;
+  top: 4375px;
+  left: 87px;
+}
+
+.hackathon .text-wrapper-19 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .frame-26 {
+  display: flex;
+  width: 1268px;
+  align-items: stretch;          /* cards same height */
+  justify-content: space-between;/* spread 3 cards nicely */
+  gap: 24px;
+  position: absolute;
+  top: 3206px;
+  left: 87px;
+}
+
+.hackathon .frame-27 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #e8e8e8;
+}
+
+.hackathon .frame-28 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .text-wrapper-20 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #484f53;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .fi-6 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #eab05c;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.hackathon .vector-2 {
+  position: absolute;
+  width: 48.17%;
+  height: 48.17%;
+  top: 0;
+  left: 25.20%;
+}
+
+.hackathon .vector-3 {
+  position: absolute;
+  width: 83.43%;
+  height: 51.70%;
+  top: 48.30%;
+  left: 8.20%;
+}
+
+.hackathon .vector-4 {
+  position: absolute;
+  width: 93.84%;
+  height: 93.79%;
+  top: 3.09%;
+  left: 3.09%;
+}
+
+.hackathon .frame-29 {
+  display: flex;
+  width: 1268px;
+  align-items: stretch;
+  justify-content: center;  /* <-- centers the two benefit cards */
+  gap: 24px;
+  position: absolute;
+  top: 3413px;
+  left: 87px;
+}
+
+.hackathon .frame-30 {
+  flex-direction: column;
+  width: 406.67px;
+  height: 183px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #e8e8e8;
+}
+
+.hackathon .vector-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  position: relative;
+  background-color: #eab05c;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.hackathon .vector-5 {
+  position: relative;
+  width: 25px;
+  height: 32px;
+  margin-top: -2.00px;
+  margin-bottom: -2.00px;
+  aspect-ratio: 0.8;
+}
+
+.hackathon .frame-31 {
+  display: flex;
+  flex-direction: column;
+  width: 1268px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: absolute;
+  top: 3656px;
+  left: 87px;
+  background-color: #fff6e9;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #eab05c;
+}
+
+.hackathon .text-wrapper-21 {
+  position: relative;
+  width: fit-content;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .frame-32 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .ellipse {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  background-color: #eab05c;
+  border-radius: 4px;
+  aspect-ratio: 1;
+}
+
+.hackathon .text-wrapper-22 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #484f53;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .frame-33 {
+  display: flex;
+  width: 1268px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+  top: 4095px;
+  left: 87px;
+}
+
+.hackathon .frame-34 {
+  display: flex;
+  flex-direction: column;
+  width: 369px;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-35 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .fi-7 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1;
+}
+
+.hackathon .vector-6 {
+  position: absolute;
+  width: 47.92%;
+  height: 39.58%;
+  top: 46.88%;
+  left: 26.05%;
+}
+
+.hackathon .vector-7 {
+  position: absolute;
+  width: 26.30%;
+  height: 27.08%;
+  top: 46.88%;
+  left: 5.20%;
+}
+
+.hackathon .vector-8 {
+  position: absolute;
+  width: 26.30%;
+  height: 27.08%;
+  top: 46.88%;
+  left: 68.50%;
+}
+
+.hackathon .vector-9 {
+  position: absolute;
+  width: 20.75%;
+  height: 22.92%;
+  top: 21.88%;
+  left: 11.46%;
+}
+
+.hackathon .vector-10 {
+  position: absolute;
+  width: 20.75%;
+  height: 22.92%;
+  top: 21.88%;
+  left: 67.79%;
+}
+
+.hackathon .vector-11 {
+  position: absolute;
+  width: 31.25%;
+  height: 31.25%;
+  top: 13.54%;
+  left: 34.38%;
+}
+
+.hackathon .frame-36 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.hackathon .frame-37 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #e8e8e8;
+}
+
+.hackathon .vector-12 {
+  position: absolute;
+  width: 78.18%;
+  height: 93.07%;
+  top: 3.46%;
+  left: 10.91%;
+}
+
+.hackathon .frame-38 {
+  display: flex;
+  flex-direction: column;
+  width: 1268px;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+  top: 4450px;
+  left: 87px;
+}
+
+.hackathon .frame-39 {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-40 {
+  flex: 1;
+  flex-grow: 1;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #e8e8e8;
+}
+
+.hackathon .fi-8 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #eab05c;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.hackathon .frame-41 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.hackathon .text-wrapper-23 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #5f5f5f;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: normal;        /* was nowrap */
+  overflow-wrap: break-word; 
+}
+
+.hackathon .div-2 {
+  position: relative;
+  align-self: stretch;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #484f53;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .vector-13 {
+  position: absolute;
+  width: 76.17%;
+  height: 100%;
+  top: 0;
+  left: 11.91%;
+}
+
+.hackathon .vector-14 {
+  position: absolute;
+  width: 21.72%;
+  height: 21.72%;
+  top: 0;
+  left: 64.65%;
+}
+
+.hackathon .span {
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #484f53;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.hackathon .text-wrapper-24 {
+  text-decoration: underline;
+}
+
+.hackathon .rectangle-4 {
+  position: absolute;
+  top: 4814px;
+  left: calc(50.00% - 720px);
+  width: 1440px;
+  height: 913px;
+  background-color: #fff6eb;
+}
+
+.hackathon .frame-42 {
+  display: flex;
+  flex-direction: column;
+  width: 1268px;
+  align-items: flex-start;
+  gap: 44px;
+  padding: 24px;
+  position: absolute;
+  top: 4892px;
+  left: calc(50% - 634px);
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #eab05c;
+}
+
+.hackathon .frame-43 {
+  display: flex;
+  flex-direction: column;
+  width: 502px;
+  align-items: flex-start;
+  gap: 37px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-44 {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-45 {
+  display: flex;
+  flex-direction: column;
+  height: 46px;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.hackathon .frame-46 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 20px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  background: linear-gradient(
+    0deg,
+    rgba(45, 72, 141, 1) 0%,
+    rgba(45, 72, 141, 1) 100%
+  );
+}
+
+.hackathon .text-wrapper-25 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Roboto-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 26px;
+  white-space: nowrap;
+}
+
+.hackathon .frame-47 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .text-wrapper-26 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .frame-48 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .text-wrapper-27 {
+  position: relative;
+  width: fit-content;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.hackathon .frame-49 {
+  display: flex;
+  flex-direction: column;
+  width: 1268px;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;
+  position: absolute;
+  top: 5229px;
+  left: calc(50.00% - 634px);
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #e4e4e4;
+}
+
+.hackathon .frame-50 {
+  display: flex;
+  flex-direction: column;
+  width: 352px;
+  align-items: flex-start;
+  gap: 37px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-51 {
+  display: flex;
+  flex-direction: column;
+  width: 246px;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .text-wrapper-28 {
+  position: relative;
+  width: fit-content;
+  margin-right: -78.00px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.hackathon .text-wrapper-29 {
+  position: relative;
+  width: fit-content;
+  margin-right: -4.00px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.hackathon .frame-52 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #ececec;
+}
+
+.hackathon .text-wrapper-30 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hackathon .frame-53 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .frame-54 {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.hackathon .vector-15 {
+  position: absolute;
+  width: 97.85%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hackathon .text-wrapper-31 {
+  position: relative;
+  width: fit-content;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.hackathon .vector-16 {
+  position: absolute;
+  width: 26.09%;
+  height: 67.39%;
+  top: 31.59%;
+  left: 0;
+}
+
+.hackathon .vector-17 {
+  position: absolute;
+  width: 65.22%;
+  height: 67.39%;
+  top: 31.59%;
+  left: 34.78%;
+}
+
+.hackathon .vector-18 {
+  position: absolute;
+  width: 26.09%;
+  height: 26.09%;
+  top: 0;
+  left: 0;
+}
+
+.hackathon .https-www-linkedin {
+  position: relative;
+  width: 100%;                /* was fit-content */
+  margin-top: -1.00px;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: normal;        /* allow wrapping */
+  word-break: break-all;      /* break even inside long URL chunks */
+  overflow-wrap: anywhere;
+}
+
+.hackathon .frame-55 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.hackathon .fi-9 {
+  position: relative;
+  width: 24px;
+  height: 24.0px;
+  aspect-ratio: 1;
+  background-image: url(./img/vector-15.svg);
+  background-size: 100% 100%;
+}
+
+.hackathon .pngdigitalid {
+  position: relative;
+  flex: 1;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: normal;        /* allow wrapping */
+  overflow-wrap: anywhere;
+}
+
+.hackathon .text-wrapper-32 {
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.hackathon .rectangle-5 {
+ position: absolute;          /* back to absolute */
+  top: 5691px;                 /* same value you had before */
+  left: 0;
+  width: 100%;                 /* stretch full width */
+  height: 129px;               /* or keep your original height */
+  background-color: #303b6e;
+  padding: 0;   
+}
+
+.hackathon .text-wrapper-33 {
+  position: static;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .frame-56 {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hackathon .text-wrapper-34 {
+  position: relative;
+  width: fit-content;
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.hackathon .frame-57 {
+  position: relative;
+  width: 110px;
+}
+
+.hackathon .rectangle-6 {
+   display: none;
+}
+
+.extra-tag-icon {
+  width: 24px;       /* match your other icons */
+  height: 24px;
+  display: block;
+  margin-top: 4px;   /* adjust spacing above hashtags */
+}
+
+
+.frame-55 {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;         /* spacing between icon and hashtags */
+}
+
+.hackathon .footer-inner {
+  max-width: 1268px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+
+/* Smaller desktops (1025–1439px):
+   fix hero overflow + keep content centred with gutters */
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+  /* main container follows viewport width */
+  .hackathon {
+    min-width: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* nav + background bands stretch full width */
+  .hackathon .nav-bar,
+  .hackathon .frame-2,
+  .hackathon .rectangle-2,
+  .hackathon .rectangle-3,
+  .hackathon .rectangle-4,
+  .hackathon .rectangle-5 {
+    left: 0;
+    width: 100%;
+  }
+
+  /* hero background – fill width, no overflow */
+  .hackathon .frame-2 {
+    overflow-x: hidden;
+  }
+
+  .hackathon .overlap-group {
+    min-width: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+
+  /* content sections that were 1268px centred on 1440px */
+  .hackathon .frame-4,   /* “Discover the benefits…” cards */
+  .hackathon .frame-6,
+  .hackathon .frame-23,
+  .hackathon .frame-24,
+  .hackathon .frame-25,
+  .hackathon .frame-26,
+  .hackathon .frame-29,
+  .hackathon .frame-31,
+  .hackathon .frame-33,
+  .hackathon .frame-38,
+  .hackathon .frame-42,
+  .hackathon .frame-49 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1268px, calc(100% - 120px));  /* shrink on smaller screens, keep ~60px gutters */
+    box-sizing: border-box;
+  }
+
+  /* timeline block “The Ideathon Journey” */
+  .hackathon .group-4 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1200px, calc(100% - 120px));
+    box-sizing: border-box;
+  }
+}
+
+
+/* ===================================================
+   GLOBAL: avoid horizontal scroll on small screens
+   =================================================== */
+@media (max-width: 1024px){
+    html,
+    body {
+    overflow-x: hidden;
+    }
+}
+
+/* ===================================================
+   TABLET + MOBILE LAYOUT  (up to iPad width)
+   =================================================== */
+@media (max-width: 1024px) {
+
+  .hackathon {
+    min-width: 0;          /* remove 1440px lock */
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* -------- NAV BAR -------- */
+  .hackathon .nav-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 16px;
+    box-sizing: border-box;
+  }
+
+  /* -------- HERO SECTION -------- */
+  .hackathon .frame-2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 80px 16px 32px;
+    box-sizing: border-box;
+    background-color: #303b6e; /* your existing band colour */
+  }
+
+  .hackathon .overlap-group {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hackathon .group {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+
+  .hackathon .group-2 {
+    position: relative;
+    width: 70%;
+    height: auto;
+    top: auto;
+    left: auto;
+    margin: 16px auto 0;
+    display: block;
+  }
+
+  .hackathon .p {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 16px;
+    font-size: 20px;
+    padding-right: 0;
+  }
+
+  .hackathon .frame-3 {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 24px;
+  }
+
+  /* -------- BACKGROUND RECTANGLES (just become bands) -------- */
+  .hackathon .rectangle-2,
+  .hackathon .rectangle-3,
+  .hackathon .rectangle-4,
+  .hackathon .rectangle-5 {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  /* -------- GENERIC CONTENT FRAMES -------- */
+  .hackathon .frame-4,
+  .hackathon .frame-6,
+  .hackathon .frame-23,
+  .hackathon .frame-24,
+  .hackathon .frame-25,
+  .hackathon .frame-26,
+  .hackathon .frame-29,
+  .hackathon .frame-31,
+  .hackathon .frame-33,
+  .hackathon .frame-38,
+  .hackathon .frame-42,
+  .hackathon .frame-49 {
+    position: relative;
+    top: auto;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 24px auto 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  /* 2-column sections → single column */
+  .hackathon .frame-6,
+  .hackathon .frame-26,
+  .hackathon .frame-29,
+  .hackathon .frame-33,
+  .hackathon .frame-39 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  /* Cards go full width */
+  .hackathon .frame-7,
+  .hackathon .frame-12,
+  .hackathon .frame-27,
+  .hackathon .frame-30,
+  .hackathon .frame-37,
+  .hackathon .frame-40,
+  .hackathon .frame-42,
+  .hackathon .frame-49 {
+    width: 100%;
+  }
+
+  .hackathon .frame-43,
+  .hackathon .frame-50,
+  .hackathon .frame-52 {
+    width: 100%;
+  }
+
+  /* Headings a bit smaller on mobile */
+  .hackathon .text-wrapper-4,
+  .hackathon .text-wrapper-11,
+  .hackathon .text-wrapper-18 {
+    font-size: 28px;
+  }
+
+  .hackathon .text-wrapper-3,
+  .hackathon .text-wrapper-5,
+  .hackathon .text-wrapper-10,
+  .hackathon .text-wrapper-20 {
+    font-size: 16px;
+  }
+
+  /* -------- FIX: long text lines with their own scrollbar -------- */
+  .hackathon [class^="text-wrapper"],
+  .hackathon .https-www-linkedin,
+  .hackathon .pngdigitalid {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* ========================================
+     "THE IDEATHON JOURNEY" + TIMELINE
+     ======================================== */
+
+  /* fix title overlapping */
+  .hackathon .text-wrapper-11 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100%;
+    margin: 40px 0 16px;
+    text-align: center;
+  }
+
+  .hackathon .group-4 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 24px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* each stage card full width, stacked */
+  .hackathon .frame-14,
+  .hackathon .frame-20,
+  .hackathon .frame-21,
+  .hackathon .frame-22 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 16px;
+  }
+
+  /* hide decorative vertical line + dots */
+  .hackathon .line,
+  .hackathon .fi-2,
+  .hackathon .fi-3,
+  .hackathon .fi-wrapper,
+  .hackathon .fi-5 {
+    display: none;
+  }
+
+  /* -------- DEADLINES STRIP -------- */
+  .hackathon .frame-38 {
+    margin-top: 32px;
+  }
+
+  .hackathon .frame-39 {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* -------- REGISTRATION & CONTACT -------- */
+  .hackathon .frame-42,
+  .hackathon .frame-49 {
+    padding: 16px;
+  }
+
+  /* -------- FOOTER: no big gap, full width -------- */
+  .hackathon .rectangle-5 {
+    position: relative;
+    top: auto;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+    padding: 16px 0;
+    background-color: #303b6e;  /* keep your footer colour */
+  }
+
+  .hackathon .footer-inner {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .hackathon .text-wrapper-33,
+  .hackathon .text-wrapper-34 {
+    white-space: normal;
+  }
+
+  .hackathon .frame-56 {
+    display: flex;
+    gap: 12px;
+  }
+
+  /* images scale down on mobile */
+  .hackathon img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* =====================================================
+     FINAL FIX: Team Composition + Eligible Participants
+     (prevent horizontal overflow in bullet rows)
+     ===================================================== */
+
+  /* Bullet row container (icon + text) */
+  .hackathon .frame-9 {
+    display: flex;
+    flex-wrap: wrap !important;       /* allow text to go under icon */
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: flex-start !important;
+  }
+
+  /* Text container inside bullet row */
+  .hackathon .frame-36 {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;          /* critical: prevent flex overflow */
+  }
+
+  /* Bullet icon */
+  .hackathon .img-2 {
+    flex-shrink: 0 !important;
+  }
+
+  /* Bullet text */
+  .hackathon .text-wrapper-15 {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Titles: "Team Composition" / "Eligible Participants" */
+  .hackathon .text-wrapper-14 {
+    white-space: normal !important;
+  }
+}
+
+/* ===================================================
+   SMALL PHONES (extra tweaks)
+   =================================================== */
+@media (max-width: 600px) {
+
+  .hackathon .frame-2 {
+    padding-top: 72px;
+  }
+
+  .hackathon .text-wrapper-4,
+  .hackathon .text-wrapper-11,
+  .hackathon .text-wrapper-18 {
+    font-size: 24px;
+  }
+
+  .hackathon .text-wrapper-5,
+  .hackathon .text-wrapper-20,
+  .hackathon .text-wrapper-23 {
+    font-size: 15px;
+  }
+
+  .hackathon .frame-3 {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* =========================================
+   Tiny overflow patch – mobile only
+   (Ideathon Journey + Team cards + Deadlines)
+   ========================================= */
+
+/* =========================================
+   Mobile overflow guard – key cards only
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* Timeline stage cards: let titles & dates wrap */
+  .hackathon .frame-14,
+  .hackathon .frame-20,
+  .hackathon .frame-21,
+  .hackathon .frame-22 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hackathon .text-wrapper-14,
+  .hackathon .element-november-to,
+  .hackathon .element-november {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Team Composition + Eligible Participants row */
+  .hackathon .frame-33 {
+    position: relative !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .hackathon .frame-27,
+  .hackathon .frame-37 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hackathon .frame-27 .text-wrapper-15,
+  .hackathon .frame-37 .text-wrapper-15 {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Deadlines strip (Application closes, Final use case...) */
+  .hackathon .frame-38,
+  .hackathon .frame-40 {
+    position: relative !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* “Final Use Case Idea Submission Link” – URL must wrap */
+  .hackathon .div-2,
+  .hackathon .text-wrapper-24 {
+    display: block !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* LinkedIn URLs */
+  .hackathon .https-www-linkedin {
+    width: 100% !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Hashtag line – just in case */
+  .hackathon .pngdigitalid {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+/* FINAL MOBILE PATCH – Team Composition + Eligible Participants */
+@media (max-width: 768px) {
+
+  /* row that holds both cards */
+  .hackathon .frame-33 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* EACH CARD inside that row:
+     - .frame-27 is "Who can participate"
+     - .frame-34 is "Team Composition"
+     - .frame-37 is "Eligible Participants"
+  */
+  .hackathon .frame-27,
+  .hackathon .frame-34,
+  .hackathon .frame-37 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* bullet rows: icon + text should wrap nicely */
+  .hackathon .frame-33 .frame-9 {
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hackathon .frame-33 .frame-36 {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .hackathon .frame-33 .text-wrapper-15 {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+/* FINAL MOBILE PATCH – Final Use Case Idea Submission Link card */
+@media (max-width: 768px) {
+
+  /* row holding the deadline cards */
+  .hackathon .frame-38,
+  .hackathon .frame-39 {
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px 24px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* each deadline card, including the Final Use Case link */
+  .hackathon .frame-40 {
+    position: relative !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* title + date text should wrap */
+  .hackathon .frame-40 .text-wrapper-23,
+  .hackathon .frame-40 .div-2 {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+.hackathon .frame-41 a,
+.hackathon .frame-41 p,
+.hackathon .div-2 {
+  display: block !important;
+  width: 100% !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+@media (max-width: 768px) {
+  .hackathon .text-wrapper-27 {
+    display: block;
+    width: 100%;
+    white-space: normal !important;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    text-decoration: underline; /* keep underline if you like it */
+  }
+}
+
+/* =========================================
+   The details – equalise card heights
+   ========================================= */
+.hackathon .frame-38 .frame-39 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.hackathon .frame-38 .frame-40 {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .hackathon .frame-38 .frame-39 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   Mobile spacing – Recognition / Registration / Questions
+   ========================================= */
+@media (max-width: 768px) {
+  .hackathon .frame-31,
+  .hackathon .frame-42,
+  .hackathon .frame-49 {
+    position: relative;
+    left: auto;
+    width: calc(100% - 32px);
+    margin: 24px 16px 0;
+    box-sizing: border-box;
+  }
+}
+
+/* ---------------------------------
+   Mobile spacing for "The details"
+   ---------------------------------*/
+@media (max-width: 1024px) {
+  /* "The details" heading block */
+  .hackathon .frame-25 {
+    margin-top: 40px;          /* pushes the heading down a bit */
+  }
+
+  /* The three benefit cards row */
+  .hackathon .frame-26 {
+    margin-top: 16px;          /* space between heading and first card */
+  }
+}
+/* FINAL MOBILE ADJUST: spacing for "The details" section */
+@media (max-width: 1024px) {
+  /* "The details" heading */
+  .hackathon .frame-25 {
+    margin: 48px auto 12px !important;   /* extra gap before heading */
+  }
+
+  /* benefit cards row under "The details" */
+  .hackathon .frame-26 {
+    margin: 12px auto 0 !important;      /* small gap below heading */
+  }
+}
+
+
+
+/* FIX mobile overflow for email row */
+@media (max-width: 768px) {
+  .hackathon .frame-9 a {
+    display: block !important;
+    white-space: normal !important;
+    word-break: break-all !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .hackathon .text-wrapper-28,
+  .hackathon .text-wrapper-29 {
+    white-space: normal !important;
+    word-break: break-all !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+/* FINAL FIX – "Questions?" emails on mobile */
+@media (max-width: 768px) {
+
+  /* the email rows inside the Questions card */
+  .hackathon .frame-51 .frame-9 {
+    flex-wrap: wrap;                /* icon on first line, email can drop below */
+    align-items: flex-start;
+  }
+
+  .hackathon .frame-51 .frame-9 a {
+    display: block;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .hackathon .frame-51 .text-wrapper-28,
+  .hackathon .frame-51 .text-wrapper-29 {
+    margin-right: 0 !important;     /* kill the -78px hack */
+    width: 100% !important;         /* make text follow card width */
+    white-space: normal !important;
+    word-break: break-all !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
