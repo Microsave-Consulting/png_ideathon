@@ -108,33 +108,47 @@ html {
   background-color: #303b6e;
 }
 
+/* container that holds BOTH SVGs side-by-side */
 .hackathon .overlap-group {
-  position: absolute;
-  height: 589px;
-  top: 0;
-  left: 0;
+  position: relative;                 /* no more absolute hero background */
   display: flex;
-  padding: 75px 45.1px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  min-width: 1440px;
-  background-image: url(./img/group.png);
-  background-size: 100% 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 75px 45px;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  background-image: none;             /* we now use <img>, not bg image */
+  background-size: contain;
+  box-sizing: border-box;
 }
 
-.hackathon .group {
-  width: 632px;
-  height: 430px;
-  aspect-ratio: 1.47;
-}
-
+/* title SVG (Papua New Guinea, etc.) */
 .hackathon .group-2 {
-  position: absolute;
-  width: 42.02%;
-  height: 32.12%;
-  top: 19.35%;
-  left: 5.90%;
+  position: static;                   /* kill absolute */
+  flex: 1 1 50%;
+  max-width: 50%;
+  height: auto;
+  max-height: 100%;
 }
+
+/* PNG map SVG */
+.hackathon .group {
+  position: static;                   /* ensure no absolute here */
+  flex: 1 1 50%;
+  max-width: 50%;
+  height: auto;
+  max-height: 100%;
+}
+
+/* make sure both images scale nicely */
+.hackathon .overlap-group img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 
 .hackathon .frame-3 {
   display: inline-flex;
@@ -1735,6 +1749,17 @@ html {
     width: min(1200px, calc(100% - 120px));
     box-sizing: border-box;
   }
+  .hackathon .frame-3 {
+    left: 87px;     /* match .hackathon .p */
+  }
+
+
+  .hackathon .p {
+    left: 87px;          /* same gutter as desktop */
+    width: auto;         /* cancel fixed 637px/420px width */
+    max-width: 320px;    /* <= this is the key: tighten the text block */
+    white-space: normal; /* allow wrapping within that width */
+  }
 }
 
 
@@ -2082,8 +2107,8 @@ html {
   }
 
   .hackathon .frame-3 {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    justify-content: flex-start;
   }
 }
 
@@ -2329,6 +2354,54 @@ html {
   .hackathon .frame-26 {
     margin: 12px auto 0 !important;      /* small gap below heading */
   }
+
+  .hackathon .frame-2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    /* FLEX LAYOUT FOR STACKING */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;        /* ⬅ left-align children, not center */
+
+    /* NICE GUTTERS SO BUTTON ISN'T ON THE EDGE */
+    padding: 80px 24px 32px;        /* top | left/right | bottom */
+    box-sizing: border-box;
+  }
+
+  .hackathon .frame-3 {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 24px;       /* space under the heading */
+    margin-left: 0;         /* starts at the 24px gutter from .frame-2 */
+  }
+
+  /* Center the line of text under it */
+  .hackathon .p {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin: 16px 0 0;
+    font-size: 20px;
+    text-align: left;       /* just in case something else is centering it */
+  }
+  /* tagline above button */
+  .hackathon .frame-2 > .p {
+    order: 3;          /* comes before the button */
+    margin-top: 16px;
+  }
+
+  /* anchor containing the "More Details" button */
+  .hackathon .frame-2 > a {
+    order: 4;          /* comes after the tagline */
+    margin-top: 12px;
+  }
+  
 }
 
 
@@ -2375,3 +2448,275 @@ html {
   }
 }
 
+/* ===============================
+   HERO OVERRIDE: title + map side-by-side on ALL widths
+   =============================== */
+
+.hackathon .frame-2 {
+  /* cancel old absolute layout as much as possible */
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
+  background-color: #303b6e;
+  box-sizing: border-box;
+
+  /* layout: title+map row, then tagline, then button */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding: 80px 24px 40px;  /* adjust if you want more side padding */
+}
+
+/* title SVG + map SVG container */
+.hackathon .overlap-group {
+  position: relative;           /* no more absolute */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  background-image: none;       /* map is now the <img>, not bg */
+}
+
+/* make both SVGs scale */
+.hackathon .overlap-group img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* left: title SVG */
+.hackathon .group-2 {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* right: map SVG */
+.hackathon .group {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* tagline & button: order and spacing */
+.hackathon .frame-2 > .p {
+  order: 2;                     /* tagline ABOVE button */
+  margin: 0;
+  font-size: 27px;
+  color: #ffffff;
+}
+
+.hackathon .frame-2 > a {
+  order: 3;                     /* button below tagline */
+}
+
+.hackathon .frame-3 {
+  position: relative;           /* kill old absolute */
+  top: auto;
+  left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 0 6.2px #8c8c8c52;
+  background: #ffffff;
+}
+
+/* -------------------------
+   RESPONSIVE TWEAKS
+   ------------------------- */
+
+/* small desktops & tablets: keep row but give map/text more breathing room */
+@media (max-width: 1024px) {
+  .hackathon .frame-2 {
+    padding: 64px 16px 32px;
+  }
+
+  .hackathon .group-2,
+  .hackathon .group {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 20px;
+  }
+}
+
+/* very small screens: still side-by-side, just tighter */
+@media (max-width: 600px) {
+  .hackathon .frame-2 {
+    padding: 48px 12px 24px;
+  }
+
+  .hackathon .overlap-group {
+    gap: 8px;
+  }
+
+  .hackathon .group-2,
+  .hackathon .group {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================
+   HERO LAYOUT OVERRIDE (all widths ≥ ~900px)
+   ========================================= */
+
+.hackathon .frame-2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+
+  background-color: #303b6e;
+
+  box-sizing: border-box;
+  padding: 96px 80px 56px;      /* adjust if you want more/less padding */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* title SVG + map SVG side-by-side */
+.hackathon .overlap-group {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  padding: 0;
+  background-image: none;       /* we now rely on the <img> elements */
+}
+
+.hackathon .overlap-group img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* left: title SVG */
+.hackathon .group-2 {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* right: map SVG */
+.hackathon .group {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* tagline – BELOW the title row, ABOVE the button */
+.hackathon .frame-2 > .p {
+  /* kill the old absolute positioning */
+  position: relative;
+  top: auto;
+  left: auto;
+
+  /* layout inside the flex container */
+  align-self: flex-start;
+  order: 2;
+  margin: 0;
+
+  /* visual style */
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 27px;
+  letter-spacing: 0;
+  line-height: 1.3;
+
+  /* keep it on one line and within the left column */
+  white-space: nowrap;
+  max-width: 640px;   /* tweak this value if you want it shorter/longer */
+}
+
+/* button – comes after tagline */
+.hackathon .frame-2 > a {
+  order: 3;
+}
+
+.hackathon .frame-3 {
+  position: relative;           /* cancel old absolute */
+  top: auto;
+  left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 0 6.2px #8c8c8c52;
+  background: #ffffff;
+}
+
+/* =========================================
+   Responsiveness
+   ========================================= */
+
+/* shrink padding + text size slightly for smaller desktops/tablets */
+@media (max-width: 1200px) {
+  .hackathon .frame-2 {
+    padding: 80px 40px 48px;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 22px;
+  }
+}
+
+/* phones: still side-by-side, but allow tagline to wrap if needed */
+@media (max-width: 900px) {
+  .hackathon .frame-2 {
+    padding: 64px 16px 40px;
+    gap: 20px;
+  }
+
+  .hackathon .overlap-group {
+    gap: 16px;
+  }
+
+  .hackathon .group-2,
+  .hackathon .group {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 18px;
+    white-space: normal;        /* OK to wrap on very narrow screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .hackathon .frame-2 > .p {
+    white-space: normal;
+    max-width: 100%;
+  }
+}
