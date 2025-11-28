@@ -100,41 +100,64 @@ html {
 }
 
 .hackathon .frame-2 {
-  position: absolute;
-  top: 72px;
-  left: calc(50.00% - 720px);
-  width: 1440px;
-  height: 589px;
+  position: relative !important;   /* no absolute */
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: auto !important;         /* allow it to grow */
+
   background-color: #303b6e;
-}
 
-.hackathon .overlap-group {
-  position: absolute;
-  height: 589px;
-  top: 0;
-  left: 0;
   display: flex;
-  padding: 75px 45.1px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  min-width: 1440px;
-  background-image: url(./img/group.png);
-  background-size: 100% 100%;
+  flex-direction: column;
+  gap: 24px;
+
+  padding: 96px 80px 56px;          /* adjust if needed */
+  box-sizing: border-box;
 }
 
-.hackathon .group {
-  width: 632px;
-  height: 430px;
-  aspect-ratio: 1.47;
+/* container that holds BOTH SVGs side-by-side */
+.hackathon .overlap-group {
+  position: relative;                 /* no more absolute hero background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 75px 45px;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  background-image: none;             /* we now use <img>, not bg image */
+  background-size: contain;
+  box-sizing: border-box;
 }
 
+/* title SVG (Papua New Guinea, etc.) */
 .hackathon .group-2 {
-  position: absolute;
-  width: 42.02%;
-  height: 32.12%;
-  top: 19.35%;
-  left: 5.90%;
+  position: static;                   /* kill absolute */
+  flex: 1 1 50%;
+  max-width: 50%;
+  height: auto;
+  max-height: 100%;
 }
+
+/* PNG map SVG */
+.hackathon .group {
+  position: static;                   /* ensure no absolute here */
+  flex: 1 1 50%;
+  max-width: 50%;
+  height: auto;
+  max-height: 100%;
+}
+
+/* make sure both images scale nicely */
+.hackathon .overlap-group img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 
 .hackathon .frame-3 {
   display: inline-flex;
@@ -187,13 +210,16 @@ html {
 }
 
 .hackathon .rectangle-2 {
-  position: absolute;
-  top: 661px;
-  left: calc(50.00% - 720px);
-  width: 1440px;
-  height: 808px;
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: auto !important;          /* avoid fixed blocks pushing up */
+
   background-color: #f7f9fb;
 }
+
 
 .hackathon .frame-4 {
   display: flex;
@@ -250,7 +276,7 @@ html {
   font-family: "Roboto-SemiBold", Helvetica;
   font-weight: 600;
   color: #000000;
-  font-size: 44px;
+  font-size: 28px;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -261,7 +287,7 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -273,7 +299,7 @@ html {
   align-items: stretch;              /* cards same height */
   gap: 24px;
   position: absolute;
-  top: 1126px;                       /* your original vertical position */
+  top: 1100px;                       /* your original vertical position */
   left: calc(50% - 634px);           /* centred 1268px container */
 }
 
@@ -362,7 +388,7 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 21.2px;
 }
@@ -383,7 +409,7 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 21.2px;
   white-space: nowrap;
@@ -406,7 +432,7 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 21.2px;
 }
@@ -450,32 +476,35 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
 }
 
 .hackathon .text-wrapper-11 {
-  position: absolute;
-  top: 1543px;
-  left: calc(50.00% - 635px);
-  width: 1270px;
+    position: absolute;
+  top: 1400px;          /* was 1500px – moved up 100px */
+  left: 120px;
+  width: auto;
+
   font-family: "Roboto-SemiBold", Helvetica;
   font-weight: 600;
   color: #000000;
-  font-size: 44px;
-  text-align: center;
+  font-size: 28px;
   letter-spacing: 0;
   line-height: normal;
+  text-align: left;
 }
+
 
 .hackathon .group-4 {
   position: absolute;
-  top: 1669px;
+  top: 1480px;          /* was 1600px – moved up 120px */
   left: 120px;
   width: 1200px;
   height: 1250px;
 }
+
 
 .hackathon .frame-14 {
   display: flex;
@@ -580,7 +609,7 @@ html {
   font-family: "Roboto-SemiBold", Helvetica;
   font-weight: 600;
   color: #000000;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
   white-space: normal;
@@ -592,7 +621,7 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #484f53;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
@@ -605,7 +634,7 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #484f53;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -643,7 +672,7 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
@@ -686,6 +715,48 @@ html {
   border-radius: 16px;
   border: 1px solid;
   border-color: #f4f4f4;
+}
+
+.hackathon .digital-ID {
+  font-family: "Roboto-Regular", Helvetica;
+  font-size: 15px;         /* match your chosen .text-wrapper-15 size */
+  line-height: 25px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.hackathon .digital-ID-list {
+  list-style-type: disc;          /* turn bullets back on */
+  list-style-position: outside;   /* normal bullet position */
+
+  margin: 0 0 16px 24px;          /* indent bullets a bit */
+  padding: 0;
+
+  color: #555;
+  font-family: "Roboto-Regular", Helvetica;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.hackathon .digital-ID-list li {
+  margin-bottom: 6px;
+}
+
+.hackathon .stage-bullet-list {
+  list-style-type: disc;
+  list-style-position: outside;
+
+  margin: 0 0 16px 24px;     /* indent bullets nicely */
+  padding: 0;
+
+  font-family: "Roboto-Regular", Helvetica;
+  font-size: 15px;
+  line-height: 25px;
+  color: #484f53;
+}
+
+.hackathon .stage-bullet-list li {
+  margin-bottom: 6px;
 }
 
 .hackathon .frame-22 {
@@ -787,6 +858,11 @@ html {
   left: 87px;
 }
 
+.hackathon .frame-23 {
+  width: min(1268px, calc(100% - 60px)) !important;
+  max-width: 100%;
+}
+
 .hackathon .text-wrapper-18 {
   position: relative;
   align-self: stretch;
@@ -794,9 +870,12 @@ html {
   font-family: "Roboto-SemiBold", Helvetica;
   font-weight: 600;
   color: #000000;
-  font-size: 44px;
+  font-size: 28px;
   letter-spacing: 0;
   line-height: normal;
+}
+.hackathon .text-wrapper-18 {
+  white-space: nowrap;
 }
 
 .hackathon .frame-24 {
@@ -828,7 +907,7 @@ html {
   font-family: "Roboto-SemiBold", Helvetica;
   font-weight: 600;
   color: #000000;
-  font-size: 32px;
+  font-size: 28px;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -877,7 +956,7 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #484f53;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
 }
@@ -1022,7 +1101,7 @@ html {
   font-family: "Roboto-Regular", Helvetica;
   font-weight: 400;
   color: #484f53;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
@@ -1735,6 +1814,17 @@ html {
     width: min(1200px, calc(100% - 120px));
     box-sizing: border-box;
   }
+  .hackathon .frame-3 {
+    left: 87px;     /* match .hackathon .p */
+  }
+
+
+  .hackathon .p {
+    left: 87px;          /* same gutter as desktop */
+    width: auto;         /* cancel fixed 637px/420px width */
+    max-width: 320px;    /* <= this is the key: tighten the text block */
+    white-space: normal; /* allow wrapping within that width */
+  }
 }
 
 
@@ -1905,7 +1995,7 @@ html {
   .hackathon .text-wrapper-5,
   .hackathon .text-wrapper-10,
   .hackathon .text-wrapper-20 {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   /* -------- FIX: long text lines with their own scrollbar -------- */
@@ -1927,17 +2017,20 @@ html {
     top: auto !important;
     left: auto !important;
     width: 100%;
-    margin: 40px 0 16px;
-    text-align: center;
+    margin: 24px 0 12px;      /* was 40px 0 16px – less air */
+    text-align: center !important;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
   }
 
-  .hackathon .group-4 {
+   .hackathon .group-4 {
     position: relative;
     top: auto;
     left: auto;
     width: 100%;
     height: auto;
-    margin: 0 auto 24px;
+    margin: 8px auto 24px;    /* small gap under heading */
     padding: 0 16px;
     box-sizing: border-box;
     display: flex;
@@ -2082,8 +2175,8 @@ html {
   }
 
   .hackathon .frame-3 {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    justify-content: flex-start;
   }
 }
 
@@ -2329,6 +2422,54 @@ html {
   .hackathon .frame-26 {
     margin: 12px auto 0 !important;      /* small gap below heading */
   }
+
+  .hackathon .frame-2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    /* FLEX LAYOUT FOR STACKING */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;        /* ⬅ left-align children, not center */
+
+    /* NICE GUTTERS SO BUTTON ISN'T ON THE EDGE */
+    padding: 80px 24px 32px;        /* top | left/right | bottom */
+    box-sizing: border-box;
+  }
+
+  .hackathon .frame-3 {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 24px;       /* space under the heading */
+    margin-left: 0;         /* starts at the 24px gutter from .frame-2 */
+  }
+
+  /* Center the line of text under it */
+  .hackathon .p {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin: 16px 0 0;
+    font-size: 20px;
+    text-align: left;       /* just in case something else is centering it */
+  }
+  /* tagline above button */
+  .hackathon .frame-2 > .p {
+    order: 3;          /* comes before the button */
+    margin-top: 16px;
+  }
+
+  /* anchor containing the "More Details" button */
+  .hackathon .frame-2 > a {
+    order: 4;          /* comes after the tagline */
+    margin-top: 12px;
+  }
+  
 }
 
 
@@ -2373,4 +2514,670 @@ html {
     word-break: break-all !important;
     overflow-wrap: anywhere !important;
   }
+}
+
+/* ===============================
+   HERO OVERRIDE: title + map side-by-side on ALL widths
+   =============================== */
+
+.hackathon .frame-2 {
+  /* cancel old absolute layout as much as possible */
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
+  background-color: #303b6e;
+  box-sizing: border-box;
+
+  /* layout: title+map row, then tagline, then button */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding: 80px 24px 40px;  /* adjust if you want more side padding */
+}
+
+/* title SVG + map SVG container */
+.hackathon .overlap-group {
+  position: relative;           /* no more absolute */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  background-image: none;       /* map is now the <img>, not bg */
+}
+
+/* make both SVGs scale */
+.hackathon .overlap-group img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* left: title SVG */
+.hackathon .group-2 {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* right: map SVG */
+.hackathon .group {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* tagline & button: order and spacing */
+.hackathon .frame-2 > .p {
+  order: 2;                     /* tagline ABOVE button */
+  margin: 0;
+  font-size: 27px;
+  color: #ffffff;
+}
+
+.hackathon .frame-2 > a {
+  order: 3;                     /* button below tagline */
+}
+
+.hackathon .frame-3 {
+  position: relative;           /* kill old absolute */
+  top: auto;
+  left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 0 6.2px #8c8c8c52;
+  background: #ffffff;
+}
+
+/* -------------------------
+   RESPONSIVE TWEAKS
+   ------------------------- */
+
+/* small desktops & tablets: keep row but give map/text more breathing room */
+@media (max-width: 1024px) {
+  .hackathon .frame-2 {
+    padding: 64px 16px 32px;
+  }
+
+  .hackathon .group-2,
+  .hackathon .group {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 20px;
+  }
+}
+
+/* very small screens: still side-by-side, just tighter */
+@media (max-width: 600px) {
+  .hackathon .frame-2 {
+    padding: 48px 12px 24px;
+  }
+
+  .hackathon .overlap-group {
+    gap: 8px;
+  }
+
+  .hackathon .group-2,
+  .hackathon .group {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================
+   HERO LAYOUT OVERRIDE (all widths ≥ ~900px)
+   ========================================= */
+
+.hackathon .frame-2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+
+  background-color: #303b6e;
+
+  box-sizing: border-box;
+  padding: 96px 80px 56px;      /* adjust if you want more/less padding */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* title SVG + map SVG side-by-side */
+.hackathon .overlap-group {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  padding: 0;
+  background-image: none;       /* we now rely on the <img> elements */
+}
+
+.hackathon .overlap-group img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* left: title SVG */
+.hackathon .group-2 {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* right: map SVG */
+.hackathon .group {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* tagline – BELOW the title row, ABOVE the button */
+.hackathon .frame-2 > .p {
+  /* kill the old absolute positioning */
+  position: relative;
+  top: auto;
+  left: auto;
+
+  /* layout inside the flex container */
+  align-self: flex-start;
+  order: 2;
+  margin: 0;
+
+  /* visual style */
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 27px;
+  letter-spacing: 0;
+  line-height: 1.3;
+
+  /* keep it on one line and within the left column */
+  white-space: nowrap;
+  max-width: 640px;   /* tweak this value if you want it shorter/longer */
+}
+
+/* button – comes after tagline */
+.hackathon .frame-2 > a {
+  order: 3;
+}
+
+.hackathon .frame-3 {
+  position: relative;           /* cancel old absolute */
+  top: auto;
+  left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 0 6.2px #8c8c8c52;
+  background: #ffffff;
+}
+
+/* =========================================
+   Responsiveness
+   ========================================= */
+
+/* shrink padding + text size slightly for smaller desktops/tablets */
+@media (max-width: 1200px) {
+  .hackathon .frame-2 {
+    padding: 80px 40px 48px;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 22px;
+  }
+}
+
+/* phones: still side-by-side, but allow tagline to wrap if needed */
+@media (max-width: 900px) {
+  .hackathon .frame-2 {
+    padding: 64px 16px 40px;
+    gap: 20px;
+  }
+
+  .hackathon .overlap-group {
+    gap: 16px;
+  }
+
+  .hackathon .group-2,
+  .hackathon .group {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 18px;
+    white-space: normal;        /* OK to wrap on very narrow screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .hackathon .frame-2 > .p {
+    white-space: normal;
+    max-width: 100%;
+  }
+}
+/* =========================================
+   FINAL HERO (flex height, no overlap)
+   ========================================= */
+
+.hackathon .frame-2 {
+  /* always relative & full-width */
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+
+  background-color: #303b6e;
+  box-sizing: border-box;
+
+  /* layout: title+map row, then tagline, then button */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  padding: 96px 80px 56px; /* desktop spacing */
+}
+
+/* row with title SVG (left) + map SVG (right) */
+.hackathon .frame-2 .overlap-group {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  background-image: none;
+}
+
+/* make both SVGs scale nicely */
+.hackathon .frame-2 .overlap-group img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* left: title SVG */
+.hackathon .frame-2 .group-2 {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* right: PNG map SVG */
+.hackathon .frame-2 .group {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* tagline text under the row */
+.hackathon .frame-2 > .p {
+  position: relative;
+  margin: 0;
+  align-self: flex-start;
+
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 27px;
+  letter-spacing: 0;
+  line-height: 1.3;
+
+  /* desktop: keep roughly one line, but allow wrapping on smaller widths */
+  white-space: nowrap;
+  max-width: 640px;
+}
+
+/* button under tagline */
+.hackathon .frame-2 > a {
+  order: 3;
+}
+
+.hackathon .frame-2 .frame-3 {
+  position: relative;
+  top: auto;
+  left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 0 6.2px #8c8c8c52;
+  background: #ffffff;
+}
+
+/* ---------- responsiveness ---------- */
+
+/* slightly smaller desktops / big tablets */
+@media (max-width: 1200px) {
+  .hackathon .frame-2 {
+    padding: 80px 40px 48px;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 22px;
+    max-width: 100%;
+  }
+}
+
+/* tablets & phones */
+@media (max-width: 900px) {
+  .hackathon .frame-2 {
+    padding: 64px 16px 40px;
+    gap: 20px;
+  }
+
+  .hackathon .frame-2 .overlap-group {
+    gap: 16px;
+  }
+
+  .hackathon .frame-2 .group-2,
+  .hackathon .frame-2 .group {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  /* allow tagline to wrap on smaller screens */
+  .hackathon .frame-2 > .p {
+    font-size: 18px;
+    white-space: normal;
+    max-width: 100%;
+  }
+}
+
+/* very small phones: stack title and map vertically */
+@media (max-width: 600px) {
+  .hackathon .frame-2 {
+    padding: 48px 12px 24px;
+  }
+
+  .hackathon .frame-2 .overlap-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hackathon .frame-2 .group-2,
+  .hackathon .frame-2 .group {
+    max-width: 100%;
+  }
+}
+
+/* HERO FINAL FIX */
+.hackathon .frame-2 {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    padding: 96px 80px 56px;
+    background-color: #303b6e;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* ===========================
+   HERO OVERRIDE (FINAL)
+   =========================== */
+
+/* Blue hero band */
+.hackathon .frame-2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+
+  background-color: #303b6e;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  padding: 96px 80px 56px; /* desktop spacing */
+}
+
+/* Row with title SVG (left) + map SVG (right) */
+.hackathon .frame-2 .overlap-group {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  background-image: none;
+}
+
+/* Make both SVGs scale nicely */
+.hackathon .frame-2 .overlap-group img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Left: title SVG */
+.hackathon .frame-2 .group-2 {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* Right: map SVG */
+.hackathon .frame-2 .group {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* Tagline text under the row */
+.hackathon .frame-2 > .p {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin: 0;
+  align-self: flex-start;
+
+  font-family: "Roboto-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 27px;
+  letter-spacing: 0;
+  line-height: 1.3;
+
+  /* keep roughly one line on desktop */
+  white-space: nowrap;
+  max-width: 640px;
+}
+
+/* Button under tagline */
+.hackathon .frame-2 > a {
+  order: 3;
+}
+
+.hackathon .frame-2 .frame-3 {
+  position: relative;
+  top: auto;
+  left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 0 6.2px #8c8c8c52;
+  background: #ffffff;
+}
+
+/* First white section below hero – no overlap */
+.hackathon .rectangle-2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #f7f9fb;
+  margin-top: 0;
+}
+
+/* Move the "Unlock the power..." block into normal flow */
+.hackathon .frame-4 {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 1268px;
+  max-width: calc(100% - 160px);
+  margin: 48px auto 0;
+}
+
+/* ---------- responsive tweaks, but still SIDE-BY-SIDE ---------- */
+
+@media (max-width: 1200px) {
+  .hackathon .frame-2 {
+    padding: 80px 40px 48px;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 22px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hackathon .frame-2 {
+    padding: 64px 16px 40px;
+    gap: 20px;
+  }
+
+  .hackathon .frame-2 .overlap-group {
+    gap: 16px;
+  }
+
+  /* still 50% / 50% – NO STACKING */
+  .hackathon .frame-2 .group-2,
+  .hackathon .frame-2 .group {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .hackathon .frame-2 > .p {
+    font-size: 18px;
+    white-space: normal;    /* allow wrapping on very narrow screens */
+    max-width: 100%;
+  }
+}
+
+/* ===========================
+   1280-ish overflow fix
+   =========================== */
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+  /* make sure the page never gets wider than the viewport */
+  .hackathon {
+    min-width: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* "Unlock the power of the SevisPass" block */
+  .hackathon .frame-4 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+
+    /* always fit inside with nice side gutters */
+    width: calc(100% - 160px);
+    max-width: 1268px;
+    margin: 48px auto 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .hackathon .frame-4 {
+    max-width: 92%;
+    margin: 24px auto 0;   /* keep it centered */
+    padding-left: 0;       /* padding handled by the narrower width */
+    padding-right: 0;
+  }
+}
+
+/* Extra breathing room for the cards on very wide desktops */
+@media (min-width: 1600px) {
+  .hackathon .frame-6 {
+    top: 1220px;   /* you can tweak to 1230/1240 if needed */
+  }
+}
+/* Wrapper for the two logos */
+.hackathon .organiser-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 24px;              /* space between the logos */
+  flex-wrap: nowrap;      /* ❗ Always side-by-side, never wrapping */
+
+  max-width: 100%;
+  overflow: hidden;       /* prevents horizontal overflow */
+}
+
+/* Logo base styling */
+.hackathon .organiser-logo {
+  height: 90px;           /* base visual height */
+  width: auto;
+  max-height: 90px;
+  max-width: 40%;         /* both logos shrink if needed */
+  object-fit: contain;    /* clean proportional scaling */
+}
+.hackathon .msc-logo {
+  max-height: 75px;
 }
