@@ -238,7 +238,7 @@ export default function Registration() {
                 <div className="reg-social-row">
                   <img
                     className="reg-social-icon"
-                    src={`${basePath}/img/image.svg`}
+                    src={`${basePath}/img/linkedin.svg`}
                     alt="LinkedIn"
                   />
                   <p className="reg-social-text">
