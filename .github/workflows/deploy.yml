@@ -28,25 +28,23 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-          cache-dependency-path: png-ideathon/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: png-ideathon
         run: npm ci
 
       - name: Build
-        working-directory: png-ideathon
         env:
-          NEXT_PUBLIC_BASE_PATH: /png_ideathon_next
+          NEXT_PUBLIC_BASE_PATH: /png_ideathon
         run: npm run build
 
       - name: Add .nojekyll
-        run: touch png-ideathon/out/.nojekyll
+        run: touch out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: png-ideathon/out
+          path: out
 
   deploy:
     environment:

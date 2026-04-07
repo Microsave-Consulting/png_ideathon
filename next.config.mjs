@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/png_ideathon_next",
-  assetPrefix: "/png_ideathon_next",
+  basePath: "/png_ideathon",
+  assetPrefix: "/png_ideathon",
   images: {
     unoptimized: true,
   },
