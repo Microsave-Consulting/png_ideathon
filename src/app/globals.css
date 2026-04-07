@@ -1,0 +1,33 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* { -webkit-font-smoothing: antialiased; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; padding: 0; overflow-x: hidden; }
+a { text-decoration: none; }
+
+.hackathon {
+  width: 100%;
+  min-width: 0;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  font-family: "Roboto-Regular", Helvetica, sans-serif;
+}
+
+.section-inner {
+  width: 100%;
+  max-width: 1268px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .section-inner { padding: 0 24px; }
+}
+@media (max-width: 768px) {
+  .section-inner { padding: 0 16px; }
+}
+@media (max-width: 600px) {
+  .section-inner { padding: 0 12px; }
+}
