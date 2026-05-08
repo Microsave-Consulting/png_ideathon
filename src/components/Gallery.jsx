@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useLayoutEffect, useRef, useCallback } from "react";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -28,6 +28,11 @@ export default function Gallery() {
   const wrapRef = useRef(null);
   const [wrapWidth, setWrapWidth] = useState(0);
 
+  // Runs before the browser paints — eliminates the 0-width flash on every load
+  useLayoutEffect(() => {
+    if (wrapRef.current) setWrapWidth(wrapRef.current.offsetWidth);
+  }, []);
+
   useEffect(() => {
     const el = wrapRef.current;
     if (!el) return;
@@ -35,7 +40,6 @@ export default function Gallery() {
       setWrapWidth(entry.contentRect.width);
     });
     ro.observe(el);
-    setWrapWidth(el.offsetWidth);
     return () => ro.disconnect();
   }, []);
 

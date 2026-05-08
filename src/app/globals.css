@@ -12,6 +12,7 @@ a { text-decoration: none; }
   overflow-x: hidden;
   background-color: #ffffff;
   font-family: "Roboto-Regular", Helvetica, sans-serif;
+  padding-top: clamp(64px, 5.8vw, 84px);
 }
 
 .section-inner {
@@ -31,3 +32,4 @@ a { text-decoration: none; }
 @media (max-width: 600px) {
   .section-inner { padding: 0 12px; }
 }
+

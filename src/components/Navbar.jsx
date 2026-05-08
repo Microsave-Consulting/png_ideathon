@@ -1,82 +1,203 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import ContactModal from "@/components/ContactModal";
+import hackathons from "../../public/data/hackathons.json";
+import "./Navbar.css";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function Navbar() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+  const [hackOpen, setHackOpen] = useState(false);
+  const dropRef = useRef(null);
+  const hackRef = useRef(null);
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (dropRef.current && !dropRef.current.contains(e.target)) {
+        setMobileOpen(false);
+      }
+      if (hackRef.current && !hackRef.current.contains(e.target)) {
+        setHackOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
   return (
     <>
-      <style>{`
-        .nav-bar {
-          display: flex;
-          width: 100%;
-          align-items: center;
-          justify-content: space-between;
-          padding: 16px 85px;
-          background-color: #303b6e;
-          box-shadow: 0px 4px 4px #d0d0d040;
-          box-sizing: border-box;
-        }
-        .nav-bar .rectangle {
-          width: 60px;
-          height: 36px;
-        }
-        .nav-bar .frame {
-          display: inline-flex;
-          align-items: center;
-          justify-content: flex-end;
-          gap: 16px;
-          transform: rotate(180deg);
-        }
-        .nav-bar .language {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 8px 12px;
-          background-color: #2d488d;
-          border-radius: 8px;
-          transform: rotate(180deg);
-        }
-        .nav-bar .lang-inner {
-          display: inline-flex;
-          align-items: center;
-          gap: 4px;
-        }
-        .nav-bar .img {
-          width: 20px;
-          height: 20px;
-        }
-        .nav-bar .text-wrapper {
-          font-family: "Roboto-Regular", Helvetica;
-          font-weight: 400;
-          color: #ffffff;
-          font-size: 16px;
-          white-space: nowrap;
-        }
-        .nav-bar .theme {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          padding: 8px;
-          background-color: #2d488d;
-          border-radius: 8px;
-          transform: rotate(180deg);
-        }
-        .nav-bar .wb-sunny {
-          width: 24px;
-          height: 24px;
-          transform: rotate(-180deg);
-        }
-        @media (max-width: 1024px) {
-          .nav-bar { padding: 16px 24px; }
-        }
-        @media (max-width: 768px) {
-          .nav-bar { padding: 12px 16px; }
-        }
-      `}</style>
+      <header className="hdr-header">
+        <div className="hdr-inner">
+          <nav className="hdr-nav" aria-label="Primary">
 
-      <div className="nav-bar">
-        <img className="rectangle" src={`${basePath}/img/rectangle.svg`} alt="logo" />
-        <div className="frame">
-          
+            {/* Logo */}
+            <a
+              href="https://www.digitalidinnovations.com/"
+              aria-label="MSC Home"
+              className="hdr-logo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={`${basePath}/img/msc-logo.svg`}
+                alt="MSC"
+                className="hdr-logo-img"
+              />
+            </a>
+
+            {/* Desktop nav links */}
+            <div className="hdr-nav-links">
+              <a href="https://www.digitalidinnovations.com/" className="hdr-link" target="_blank" rel="noopener noreferrer">
+                Home
+              </a>
+
+              <div
+                className="hdr-drop-group"
+                ref={hackRef}
+              >
+                <button
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded={hackOpen}
+                  className="hdr-drop-btn"
+                  onClick={() => setHackOpen((s) => !s)}
+                >
+                  Hackathons
+                  <svg
+                    width="0.75em"
+                    height="0.463em"
+                    viewBox="0 0 12 7.41"
+                    fill="none"
+                    style={{ color: "#334155", flexShrink: 0 }}
+                  >
+                    <path
+                      d="M1 1l5 5.41L11 1"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div className={`hdr-dropdown${hackOpen ? " open" : ""}`}>
+                  {hackathons.map((h) => (
+                    <a key={h.ID} href={h.URL} target="_blank" rel="noopener noreferrer" onClick={() => setHackOpen(false)}>
+                      {h.Title}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <a href="https://www.digitalidinnovations.com/library" className="hdr-link" target="_blank" rel="noopener noreferrer">
+                Use Case Library
+              </a>
+            </div>
+
+            {/* Right: hamburger (mobile) + Contact Us (desktop) */}
+            <div className="hdr-right" ref={dropRef}>
+              <div style={{ position: "relative" }}>
+                <button
+                  type="button"
+                  aria-label={mobileOpen ? "Close menu" : "Open menu"}
+                  aria-expanded={mobileOpen}
+                  onClick={() => setMobileOpen((s) => !s)}
+                  className={`hdr-ham${mobileOpen ? " open" : ""}`}
+                >
+                  <span className="bars" aria-hidden="true">
+                    <span className="bar" />
+                    <span className="bar" />
+                    <span className="bar" />
+                  </span>
+                </button>
+
+                {mobileOpen && (
+                  <div className="mob-drop" role="menu">
+                    <p className="mob-drop-label">Navigation</p>
+
+                    <a
+                      href="https://www.digitalidinnovations.com/"
+                      role="menuitem"
+                      className="mob-drop-item"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      <span className="mob-dot" />
+                      Home
+                    </a>
+
+                    <a
+                      href="https://www.digitalidinnovations.com/library/"
+                      role="menuitem"
+                      className="mob-drop-item"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      <span className="mob-dot" />
+                      Use Case Library
+                    </a>
+
+                    <div className="mob-drop-divider" />
+                    <p className="mob-drop-label">Hackathons</p>
+
+                    {hackathons.map((h) => (
+                      <a
+                        key={h.ID}
+                        href={h.URL}
+                        role="menuitem"
+                        className="mob-drop-item"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        <span className="mob-dot" />
+                        {h.Title}
+                      </a>
+                    ))}
+
+                    <div className="mob-drop-divider" />
+                    <button
+                      type="button"
+                      role="menuitem"
+                      className="mob-drop-item"
+                      style={{ background: "#1F3A6D", color: "#ffffff", fontWeight: 600 }}
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setContactOpen(true);
+                      }}
+                    >
+                      <span className="mob-dot" style={{ background: "#ffffff" }} />
+                      Contact Us
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Contact Us — desktop only */}
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileOpen(false);
+                  setContactOpen(true);
+                }}
+                className="hdr-cta"
+              >
+                Contact Us
+              </button>
+            </div>
+
+          </nav>
         </div>
-      </div>
+      </header>
+
+      <ContactModal
+        isOpen={contactOpen}
+        onClose={() => setContactOpen(false)}
+      />
     </>
   );
 }

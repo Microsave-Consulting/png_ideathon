@@ -312,11 +312,38 @@ export default function Results() {
       {modalOpen && (
         <div
           className="results-overlay"
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 1000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "1.25rem",
+            boxSizing: "border-box",
+            background: "rgba(0,0,0,0.55)",
+            backdropFilter: "blur(4px)",
+            WebkitBackdropFilter: "blur(4px)",
+          }}
           onClick={(e) => {
             if (e.target === e.currentTarget) setModalOpen(false);
           }}
         >
-          <div className="results-modal">
+          <div
+            className="results-modal"
+            style={{
+              position: "relative",
+              background: "#fff",
+              borderRadius: "1rem",
+              overflow: "hidden",
+              width: "100%",
+              maxWidth: "min(56rem, calc(100vw - 2.5rem))",
+              maxHeight: "calc(100vh - 2.5rem)",
+              display: "flex",
+              flexDirection: "column",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
+            }}
+          >
             <button
               className="results-modal-close"
               onClick={() => setModalOpen(false)}
