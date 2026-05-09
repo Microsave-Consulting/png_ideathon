@@ -1,158 +1,217 @@
+"use client";
+import { useState } from "react";
+import ContactModal from "@/components/ContactModal";
+
+function SocialIcon({ label, base, href }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const [hovered, setHovered] = useState(false);
+  const hoverName = base === "linkedin" ? "linked_hover" : `${base}_hover`;
+  return (
+    <a
+      href={href || "#"}
+      aria-label={label}
+      target={href ? "_blank" : undefined}
+      rel={href ? "noopener noreferrer" : undefined}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="ftr-social-link"
+    >
+      <img
+        src={`${basePath}/social media icons/${hovered ? hoverName : base}.svg`}
+        alt={label}
+        className="ftr-social-img"
+      />
+    </a>
+  );
+}
+
 export default function Footer() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <>
       <style>{`
-        .footer-section {
+        .ftr-root {
+          font-family: 'Albert Sans', sans-serif;
+          background: #FFFFFF;
+          border-top: 1px solid #F1F1F1;
+          box-shadow: 0 -1px 0 0 #F1F1F1, 0 4px 4px 0 rgba(0,0,0,0.11);
           width: 100%;
-          background-color: #303b6e;
-          padding: 1.25rem 0;
-        }
-
-        .footer-inner {
-          width: 100%;
-          padding: 0 5%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
           box-sizing: border-box;
-          gap: 1rem;
         }
 
-        /* ── Left: copyright + logo ── */
-        .footer-left {
+        .ftr-grid {
+          width: 100%;
+          padding:
+            clamp(28px, 3.33vw, 64px)
+            clamp(24px, 6.30vw, 121px)
+            clamp(28px, 3.33vw, 64px)
+            clamp(24px, 6.30vw, 121px);
           display: flex;
           align-items: center;
-          gap: 0.75rem;
-          flex-shrink: 0;
+          justify-content: space-between;
+          gap: clamp(24px, 3.13vw, 60px);
+          box-sizing: border-box;
         }
 
-        .footer-copy {
-          font-family: "Roboto-Medium", Helvetica, sans-serif;
-          font-weight: 500;
-          color: #ffffff;
-          font-size: 0.875rem;
-          line-height: 1.5;
+        .ftr-brand {
+          flex: 1 1 auto;
+          max-width: clamp(220px, 28vw, 420px);
         }
 
-        .footer-msc-logo {
-          height: 2rem;
+        .ftr-logo {
+          height: clamp(36px, 4.1vw, 64px);
           width: auto;
           display: block;
-          flex-shrink: 0;
+          margin-bottom: clamp(8px, 0.83vw, 16px);
         }
 
-        /* ── Right: follow us + icons ── */
-        .footer-right {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          flex-shrink: 0;
-        }
-
-        .footer-follow {
-          font-family: "Roboto-Regular", Helvetica, sans-serif;
+        .ftr-tagline {
+          font-size: clamp(12px, 0.83vw, 16px);
           font-weight: 400;
-          color: #ffffff;
-          font-size: 0.875rem;
-          white-space: nowrap;
+          color: #334155;
+          line-height: 1.6;
+          letter-spacing: 0;
+          margin: 0;
         }
 
-        .footer-social {
+        .ftr-socials {
           display: flex;
           align-items: center;
-          gap: 0.5rem;
+          gap: clamp(8px, 0.83vw, 16px);
+          flex-shrink: 0;
         }
 
-        .footer-social-link {
-          display: flex;
+        .ftr-social-link {
+          display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 2.25rem;
-          height: 2.25rem;
+          width: clamp(20px, 1.56vw, 30px);
+          height: clamp(20px, 1.56vw, 30px);
           flex-shrink: 0;
-          transition: opacity 0.2s;
-        }
-        .footer-social-link:hover {
-          opacity: 0.75;
         }
 
-        .footer-icon {
-          width: 1.5rem;
-          height: 1.5rem;
+        .ftr-social-img {
+          width: clamp(18px, 1.46vw, 28px);
+          height: clamp(18px, 1.46vw, 28px);
           display: block;
-          filter: brightness(0) invert(1);
+          transition: opacity 200ms ease;
         }
 
-        /* ── Responsive ── */
-        @media (max-width: 48rem) {
-          .footer-inner {
-            flex-wrap: wrap;
-            gap: 0.75rem;
-          }
-          .footer-left {
-            flex: 1 1 100%;
-          }
-          .footer-right {
-            flex: 1 1 100%;
-          }
+        .ftr-bottom {
+          background: #FBFBFB;
+          border-top: 1px solid #F1F1F1;
+          padding: clamp(12px, 1.25vw, 24px) clamp(24px, 6.30vw, 121px);
         }
 
-        @media (max-width: 37.5rem) {
-          .footer-section { padding: 1rem 0; }
-          .footer-copy { font-size: 0.8125rem; }
-          .footer-follow { font-size: 0.8125rem; }
+        .ftr-bottom p {
+          margin: 0;
+          text-align: center;
+          font-family: 'Albert Sans', sans-serif;
+          font-size: clamp(12px, 0.78vw, 15px);
+          font-weight: 400;
+          color: #334155;
+          line-height: 1;
+        }
+
+        .ftr-link {
+          color: #334155;
+          text-decoration: none;
+          font-size: clamp(12px, 0.73vw, 14px);
+          font-weight: 400;
+          line-height: 1;
+          white-space: nowrap;
+          font-family: 'Albert Sans', sans-serif;
+          transition: color 150ms ease;
+        }
+        .ftr-link:hover { color: #1F3A6D; }
+
+        @media (max-width: 480px) {
+          .ftr-grid {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            padding:
+              clamp(20px, 5vw, 28px)
+              clamp(16px, 5vw, 24px)
+              clamp(20px, 5vw, 28px)
+              clamp(16px, 5vw, 24px);
+          }
+
+          .ftr-brand { max-width: 100%; }
+
+          .ftr-logo {
+            height: clamp(32px, 9vw, 44px);
+            margin-bottom: 10px;
+          }
+
+          .ftr-tagline { font-size: clamp(12px, 3.2vw, 14px); }
+
+          .ftr-socials { gap: clamp(8px, 2.5vw, 14px); }
+
+          .ftr-social-link {
+            width: clamp(20px, 5.5vw, 28px);
+            height: clamp(20px, 5.5vw, 28px);
+          }
+
+          .ftr-social-img {
+            width: clamp(18px, 5vw, 26px);
+            height: clamp(18px, 5vw, 26px);
+          }
+
+          .ftr-bottom { padding: clamp(10px, 3vw, 16px) clamp(16px, 5vw, 24px); }
+
+          .ftr-bottom p { font-size: clamp(11px, 3vw, 13px); }
         }
       `}</style>
 
-      <div className="footer-section">
-        <div className="footer-inner">
-          {/* Left: copyright + MSC logo */}
-          <div className="footer-left">
-            <span className="footer-copy">
-              © {new Date().getFullYear()} Microsave Consulting Pvt Ltd.
-            </span>
+      <footer className="ftr-root">
+        <div className="ftr-grid">
+          <div className="ftr-brand">
             <img
-              src={`${basePath}/img/rectangle.svg`}
-              className="footer-msc-logo"
-              alt="MSC Logo"
+              src={`${basePath}/img/msc-logo.svg`}
+              alt="MSC MicroSave Consulting"
+              className="ftr-logo"
             />
+            <p className="ftr-tagline">
+              MSC (MicroSave Consulting) is a global consulting firm that
+              enables social, financial, and economic inclusion for everyone in
+              the digital age.
+            </p>
           </div>
 
-          {/* Right: Follow us + social icons */}
-          <div className="footer-right">
-            <span className="footer-follow">Follow us</span>
-            <div className="footer-social">
-              <a
-                href="https://x.com/MicroSave"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-social-link"
-                aria-label="Twitter"
-              >
-                <img
-                  src={`${basePath}/img/msc-twitter.svg`}
-                  className="footer-icon"
-                  alt="Twitter"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/microsave/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-social-link"
-                aria-label="LinkedIn"
-              >
-                <img
-                  src={`${basePath}/img/msc-linkedin.svg`}
-                  className="footer-icon"
-                  alt="LinkedIn"
-                />
-              </a>
-            </div>
+          <div className="ftr-socials">
+            <SocialIcon
+              label="Facebook"
+              base="fb"
+              href="https://www.facebook.com/MicroSaveConsulting/"
+            />
+            <SocialIcon
+              label="LinkedIn"
+              base="linkedin"
+              href="https://www.linkedin.com/company/microsave/"
+            />
+            <SocialIcon label="X" base="x" href="https://x.com/MicroSave" />
+            <SocialIcon
+              label="YouTube"
+              base="youtube"
+              href="https://www.youtube.com/user/MicroSaveWorldwide/videos"
+            />
           </div>
         </div>
-      </div>
+
+        <div className="ftr-bottom">
+          <p>
+            © {new Date().getFullYear()} MicroSave Consulting All rights reserved.
+          </p>
+        </div>
+      </footer>
+
+      <ContactModal
+        isOpen={contactOpen}
+        onClose={() => setContactOpen(false)}
+      />
     </>
   );
 }
