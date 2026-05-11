@@ -226,11 +226,11 @@ export default function Registration() {
                   />
                   <a
                     className="reg-social-link"
-                    href="https://twitter.com/ictpng"
+                    href="https://x.com/pngdeptofict"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    @ictpng
+                    @pngdeptofict
                   </a>
                 </div>
 
